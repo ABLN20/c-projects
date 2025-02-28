@@ -1,0 +1,45 @@
+Part one: review of key concepts
+
+1. Const: why const? what does const imply? what is const, the pointer or the stuff (say int) pointed by pointer?
+
+2. Types and sprial rule. Can you tell what are the types of the following definitions? Do you know how to use spriral rule to find it out? 
+int *x[10]; 
+int *y(int z);
+int (*w)(char u, short *v);
+
+3. Pointer and casting. (i) static_cast: what is it? when is it performed? (ii) dynamic_cast: what is it? when is it performed? how different from static_cast? (iii) how about const_cast and reinterpret_cast? 
+
+4. Reference. What is the main difference from pointer?  
+
+5. Reference and function: pass by value vs pass by reference. When to use const for pass by reference?
+
+6. Exception. What is exception? Excepton vs. return error code. 
+
+7. Range loop: what is it?
+
+Part two: programming practice
+
+1. Constant and pointer
+You are given an array of integers. You would loop and sum up the values in the array and print out the sum. Here, you don't want to mess up the array. So some sort of "const" is needed. Now how are you going to declare and define this function (check the starter code)? 
+
+2. Practice pointer and function
+Function pointer is a very useful thing in C++. We now practice its use in a simple situation, sorting. Here, you need to implement a simple sorting function that takes a list of integers and also a function pointer that compares two numbers x and y (and return true if x should be placed earlier than y, and false otherwise). Look at the starter code and start by defining the function pointer. 
+
+3. Casting
+In this practice, we practice various aspects of castings in C++. Look at the starter code. Fill in the missing parts of casting. Note: use the best possible casting. 
+
+4. Fixing error in my code. You want to implement a function that takes a string x, and make sure after the function call, x contains a prefix of x with length of at most five. I have written up a piece of code but it doesn't quite work. Your task is fixing it.
+
+5. Exception handling.
+In this exercise, you practice with exception handling.
+
+(1) You want to implement a function foo, which takes an integer n. This function throws an exception as a string "NEGATIVE" if n < 0. This function throws an exception as a string "ZERO" if n = 0. Otherwise, foo simply do nothing. 
+
+(2) Then you need to implement exception handling in a function called bar, which invokes foo and return a string. Here, bar will  catch the exception: (i) if there is an exception, return the string thrown in the exception; (ii) if no exception is caught, simply return "OK"
+
+6. Coding practice (if time allows)
+You are given a string which represents a unsigned decimal number. You want to construct and return a string that represents the inverse of this number. For example, if you are given 1102, you would return "2011". You may assume the given string is in valid decimal format.
+
+Note: you shouldn't output leading zeros in the constructed number. That is, the string you construct should follow the convention for decimal number we normally use. For now, you may assume the given string doesn't have leading zeros.
+
+
